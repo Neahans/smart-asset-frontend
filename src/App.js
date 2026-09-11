@@ -1,24 +1,78 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
+import Assets from "./pages/Assets";
+import Layout from "./components/Layout";
+import Inventory from "./pages/Inventory";
+import Tickets from "./pages/Tickets";
+import Profile from "./pages/Profile";
+import "./App.css";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      {/* Login */}
+      <Route
+        path="/"
+        element={<Navigate to="/login" replace />}
+      />
+
+      <Route
+        path="/login"
+        element={<Login />}
+      />
+
+      {/* Dashboard */}
+      <Route
+        path="/dashboard"
+        element={
+          <Layout>
+            <Dashboard />
+          </Layout>
+        }
+      />
+
+      {/* Assets */}
+      <Route
+        path="/assets"
+        element={
+          <Layout>
+            <Assets />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/inventory"
+        element={
+          <Layout>
+            <Inventory />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/tickets"
+        element={
+          <Layout>
+            <Tickets />
+          </Layout>
+        }
+      />
+
+      <Route
+        path="/profile"
+        element={
+          <Layout>
+            <Profile />
+          </Layout>
+        }
+      />
+    </Routes>
   );
 }
 

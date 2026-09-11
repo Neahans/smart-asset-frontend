@@ -1,0 +1,159 @@
+.tickets-page {
+  width: 100%;
+}
+
+.ticket-summary-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.ticket-summary-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.ticket-summary-icon.red {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.ticket-summary-icon.yellow {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.ticket-summary-icon.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.ticket-summary-card span {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.ticket-summary-card strong {
+  display: block;
+  font-size: 25px;
+  color: #111827;
+}
+
+.tickets-table-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.ticket-badge {
+  display: inline-block;
+  padding: 5px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Status */
+
+.ticket-open {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.ticket-progress {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.ticket-resolved {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* Priority */
+
+.priority-high {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.priority-medium {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.priority-low {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* Modal */
+
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2000;
+}
+
+.ticket-modal {
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.modal-heading h4 {
+  margin: 0;
+  font-weight: 700;
+  color: #111827;
+}
+
+.modal-heading p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.modal-close {
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.modal-close:hover {
+  color: #111827;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
